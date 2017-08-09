@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="row">
+				<p class="col-lg-6">Algorithms > Strings > Mars Exploration</p>
+				<pre class="code col-lg-6">function main() {
+    var S = readLine();
+    var counter = 0;
+    var howMany = S.length/3;
+    var split = S.split("");
+    var arr = [];
+    for(var i = 0; i < howMany; i+=1){
+        var sos = split.splice(0,3);
+        arr[counter] = sos;
+        counter+=1;
+    }
+    var disrupted = 0;
+    var wrong = arr.map(function(x){
+        var sos = ["S","O","S"];
+        var counter = 0;
+        while(counter < x.length){
+            var index = x[counter].indexOf(sos[counter]);
+            if(index===-1){
+                disrupted+=1;
+            }
+            counter+=1;
+        }
+    });
+    console.log(disrupted);
+}</pre>
+		</div>
+		</div>
+		<div class="col-lg-12">
+			<div class="row">
+				<p class="col-lg-6"> Algorithms > Strings > CamelCase </p>
+				<pre class="col-lg-6">function main() {
+    var s = readLine();
+    var count = 0;
+    var lowerCaseRegex = /[a-z]/g;
+    var upperCase = /[A-Z]/g;
+    if(s[0].match(lowerCaseRegex)){
+        count = 1;
+    }
+    if(s.match(upperCase)){
+       var upperCaseLetters =  s.match(upperCase);
+       console.log(upperCaseLetters.length + count);
+        return;
+    }
+    console.log(1);
+}</pre>
+		</div>
+		</div>
+		<div class="col-lg-12">
+			<div class="row">
+				<p class="col-lg-6">Algorithms > Strings > Super Reduced String</p>
+				<pre class="col-lg-6">function super_reduced_string(s){
+    // Complete this function
+    var regex = /([a-z])\1/g;
+    var similar = true;
+    var char = "";
+    while(similar){
+        s = s.replace(regex,"");
+        char = s.match(regex);
+        if(char===null){
+            similar =false;
+        }
+    }
+    if(s==="")return "Empty String";
+    return s;
+}</pre>
+		</div>
+		</div>
+		<div class="col-lg-12">
+			<div class="row">
+				<p class="col-lg-6"></p>
+				<pre class="col-lg-6"></pre>
+			</div>
+		</div>
+		<div class="col-lg-12">
+			<div class="row">
+				<p class="col-lg-6"></p>
+				<pre class="col-lg-6"></pre>
+			</div>
+		</div>
+		<div class="col-lg-12">
+			<div class="row">
+				<p class="col-lg-6"></p>
+				<pre class="col-lg-6"></pre>
+			</div>
+		</div>
+		<div class="col-lg-12">
+			<div class="row">
+				<p class="col-lg-6"></p>
+				<pre class="col-lg-6"></pre>
+			</div>
+		</div>
+		<div class="col-lg-12">
+			<div class="row">
+				<p class="col-lg-6"></p>
+				<pre class="col-lg-6"></pre>
+			</div>
+		</div>
+		<div class="col-lg-12">
+			<div class="row">
+				<p class="col-lg-6"></p>
+				<pre class="col-lg-6"></pre>
+			</div>
+		</div>
+		<div class="col-lg-12">
+			<div class="row">
+				<p class="col-lg-6"></p>
+				<pre class="col-lg-6"></pre>
+			</div>
+		</div>
+		<div class="col-lg-12">
+			<div class="row">
+				<p class="col-lg-6"></p>
+				<pre class="col-lg-6"></pre>
+			</div>
+		</div>
+		<div class="col-lg-12">
+			<div class="row">
+				<p class="col-lg-6"></p>
+				<pre class="col-lg-6"></pre>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.min.js" type="text/javascript" charset="utf-8" async defer></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script src="script.js" type="text/javascript" charset="utf-8" async defer></script>
+</body>
+</html>
